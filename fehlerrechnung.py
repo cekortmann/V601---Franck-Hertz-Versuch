@@ -10,10 +10,24 @@ from uncertainties.unumpy import uarray                     # Array von Fehler: 
 from uncertainties.unumpy import (nominal_values as noms,   # Wert:             noms(fehlerwert) = x
                                   std_devs as stds)  
 
-def Blang(I,l):
-    return 12.566*10**(-7)*1*3400*I/l
+def p(T):
+    return 5.5*10**7*np.exp(-6876/T)
 
-uI = ufloat(0.5, 0.1)
-ul = ufloat(0.102, 0.005)
+def w(p): 
+    return 0.0029/p
 
-print(Blang(uI, ul))
+print('Dampfdruck')
+print(p(297.35))
+print(p(413.35))
+print(p(434.05))
+print(p(435.25))
+print(p(447.95))
+print(p(449.35))
+print(' ')
+print('mittlere Weglänge')
+print(w(p(297.35)))
+print(w(p(413.35)))
+print(w(p(434.05)))
+print(w(p(435.25)))
+print(w(p(447.95)))
+print(w(p(449.35)))

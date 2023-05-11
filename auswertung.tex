@@ -2,3 +2,93 @@
 \label{sec:Auswertung}
 
 \input{fehlerrechnung.tex}
+
+
+Für die verwendeten Temperaturen ergeben sich mittels \autoref{eqn:druck} der Sättigungsdampfdruck und mittels \autoref{eqn:weglaenge} die mittlere 
+freie Weglänge, die beide in \autoref{tab: temp} dargestellt sind.
+\begin{table}
+    \centering
+    \caption{Sättigungsdampfdruck und mittlere freie Weglänge.}
+\begin{tabular}{c c c c}
+    \toprule
+        $T\mathbin{/}\unit{\celsius}$ &$T\mathbin{/}\unit{\kelvin}$ & $p_{\text{sät}}\mathbin{/}\unit{\mbar}$ & $\bar{w} \mathbin{/} \unit{\cm}$ \\
+    \midrule
+    24.2 & 297.35 & 0.0050 & 0.5818\\
+    140.2 & 413.35 & 3.2806 & 0.0009\\
+    160.9 & 434.05 & 7.2525 & 0.0004\\
+    162.1 & 435.25 & 7.5763 & 0.0004\\
+    174.8 & 447.95 & 11.8570 & 0.0002 \\
+    176.2 & 449.35 & 12.4378 & 0.0002 \\
+     \bottomrule
+    \end{tabular}
+    \label{tab: temp}
+\end{table}
+
+Wenn die mittlere freie Weglänge nun mit dem Abstand $a=1\,\unit{\cm}$ zwischen Kathode und Beschleunigerelektrode verglichen wird, stellt man fest, dass die
+mittlere freie Weglänge bei den verwendeten Temperaturen weitaus kleiner als dieser ist (Faktor 1000 bis 5000). Bei Zimmertemperatur von $24.2\,\unit{\celsius}$ ist die Differenz
+zwischen a und $\bar{w}$ jedoch kleiner, was dazu führt die Stoßwahrscheinlichkeit sehr gering ist.
+
+\subsection{Differentielle Energieverteilung}
+Hier werden die ersten beiden Graphen des Anhangs betrachtet, wobei der erste Graph der Messung bei Zimmertemperatur entspricht. Um die Steigung der 
+Graphen zu bestimmen, muss zuerst gezählt werden wie viele Skalenteile/Millimeter einem Volt auf der Skala $U_{\symup{A}}$ entsprechen. Dazu werden 
+die Abstände zwischen den markierten Skalenpunkten gezählt und im Anschluss gemittelt. Diese Berechnung ist in \autoref{tab:skala1} dargestellt.
+\begin{table}
+    \centering
+    \caption{Einteilung der Skala.}
+\begin{tabular}{c c c}
+    \toprule
+         & Messreihe bei $T=297.35\,\unit{\kelvin}$ & Messreihe bei $T=413.35\,\unit{\kelvin}$ \\
+    \midrule
+    (0-1)V & 26 Skt & 31 Skt \\
+    (1-2)V & 27 Skt & 25 Skt \\
+    (2-3)V & 22 Skt & 25 Skt \\
+    (3-4)V & 25 Skt & 25 Skt \\
+    (4-5)V & 25 Skt & 25 Skt\\
+    (5-6)V & 23 Skt &  23 Skt \\
+    (6-7)V & 27 Skt & 23 Skt \\
+    (7-8)V & 26 Skt & 25 Skt \\
+    (8-9)V & 24 Skt & 25 Skt \\
+    (9-10)V & 25 Skt & 19 Skt \\
+    \midrule
+    Mittelwert & 25.0 Stk/V & 24.6 Stk/V \\
+     \bottomrule
+    \end{tabular}
+    \label{tab: temp}
+\end{table}
+
+Nun wird für jedes Intervall von 10 Skt die mittlere Steigung abgelesen, indem Steigungsdreiecke eingezeichnet werden. Diese befinden sich bereits auf der 
+Abbildung im Anhang. Die Steigungen beider Messreihen befinden sich in \autoref{tab:steigung}.
+
+\begin{table}
+    \centering
+    \caption{Bestimmung der Steigung der Graphen beider Messreihen.}
+\begin{tabular}{c c c c}
+    \toprule
+    & Steigung bei $T=297.35\,\unit{\kelvin}$ & & Steigung bei  $T=413.35\,\unit{\kelvin}$ \\
+        Position / V & $\frac{\symup{Delta}y}{\symup{\Delta}x} \mathbin{/} Skt_y/Skt_x$ &Position / V & $\frac{\symup{Delta}y}{\symup{\Delta}x} \mathbin{/} Skt_y/Skt_x$ \\
+    \midrule
+    0.16 & 1.9 & 0.2 & 3.0 \\
+    0.56 & 1.5 & 0.6 & 1.9 \\
+    0.96 & 1.5 & 1.0 & 2.1 \\
+    1.36 & 1.4 & 1.4 & 2.0 \\
+    1.76 & 1.3 & 1.8 & 1.9 \\
+    2.16 & 1.1 & 2.2 & 1.8 \\ 
+    2.56 & 1.1 & 2.6 & 1.6 \\
+    2.96 & 0.9 & 3.0 & 1.6 \\
+    3.36 & 0.9 & 3.4 & 1.4 \\
+    3.76 & 0.8 & 3.8 & 1.2 \\
+    4.16 & 0.7 & 4.0 & 1.0 \\
+    4.56 & 0.7 & &&\\
+    4.96 & 0.6 & &&\\
+    5.36 & 0.5 & &&\\
+    5.76 & 0.4 & &&\\
+    6.16 & 0.4 & &&\\
+    6.56 & 0.4 & &&\\
+    6.96 & 0.3 & &&\\
+    7.36 & 0.4 & &&\\
+    7.76 & 0.2 & &&\\
+     \bottomrule
+    \end{tabular}
+    \label{tab: steigung}
+\end{table}
+
