@@ -11,7 +11,7 @@ freie Weglänge, die beide in \autoref{tab: temp} dargestellt sind.
     \caption{Sättigungsdampfdruck und mittlere freie Weglänge.}
 \begin{tabular}{c c c c}
     \toprule
-        $T\mathbin{/}\unit{\celsius}$ &$T\mathbin{/}\unit{\kelvin}$ & $p_{\text{sät}}\mathbin{/}\unit{\mbar}$ & $\bar{w} \mathbin{/} \unit{\cm}$ \\
+        $T\mathbin{/}\unit{\celsius}$ &$T\mathbin{/}\unit{\kelvin}$ & $p_{\text{sät}}\mathbin{/}\symup{mbar}$ & $\bar{w} \mathbin{/} \unit{\cm}$ \\
     \midrule
     24.2 & 297.35 & 0.0050 & 0.5818\\
     140.2 & 413.35 & 3.2806 & 0.0009\\
@@ -50,7 +50,7 @@ die Abstände zwischen den markierten Skalenpunkten gezählt und im Anschluss ge
     (8-9)V & 24 Skt & 25 Skt \\
     (9-10)V & 25 Skt & 19 Skt \\
     \midrule
-    Mittelwert & 25.0 Stk/V & 24.6 Stk/V \\
+    Mittelwert & 25.0 Skt/V & 24.6 Skt/V \\
      \bottomrule
     \end{tabular}
     \label{tab: temp}
@@ -62,10 +62,10 @@ Abbildung im Anhang. Die Steigungen beider Messreihen befinden sich in \autoref{
 \begin{table}
     \centering
     \caption{Bestimmung der Steigung der Graphen beider Messreihen.}
-\begin{tabular}{c c c c}
+\begin{tabular}{c c | c c}
     \toprule
     & Steigung bei $T=297.35\,\unit{\kelvin}$ & & Steigung bei  $T=413.35\,\unit{\kelvin}$ \\
-        Position / V & $\frac{\symup{Delta}y}{\symup{\Delta}x} \mathbin{/} Skt_y/Skt_x$ &Position / V & $\frac{\symup{Delta}y}{\symup{\Delta}x} \mathbin{/} Skt_y/Skt_x$ \\
+        Position / V & $\frac{\symup{\Delta}y}{\symup{\Delta}x} \mathbin{/} Skt_y/Skt_x$ &Position / V & $\frac{\symup{\Delta}y}{\symup{\Delta}x} \mathbin{/} Skt_y/Skt_x$ \\
     \midrule
     0.16 & 1.9 & 0.2 & 3.0 \\
     0.56 & 1.5 & 0.6 & 1.9 \\
@@ -78,17 +78,42 @@ Abbildung im Anhang. Die Steigungen beider Messreihen befinden sich in \autoref{
     3.36 & 0.9 & 3.4 & 1.4 \\
     3.76 & 0.8 & 3.8 & 1.2 \\
     4.16 & 0.7 & 4.0 & 1.0 \\
-    4.56 & 0.7 & &&\\
-    4.96 & 0.6 & &&\\
-    5.36 & 0.5 & &&\\
-    5.76 & 0.4 & &&\\
-    6.16 & 0.4 & &&\\
-    6.56 & 0.4 & &&\\
-    6.96 & 0.3 & &&\\
-    7.36 & 0.4 & &&\\
-    7.76 & 0.2 & &&\\
+    4.56 & 0.7 & &\\
+    4.96 & 0.6 & &\\
+    5.36 & 0.5 & &\\
+    5.76 & 0.4 & &\\
+    6.16 & 0.4 & &\\
+    6.56 & 0.4 & &\\
+    6.96 & 0.3 & &\\
+    7.36 & 0.4 & &\\
+    7.76 & 0.2 & &\\
      \bottomrule
     \end{tabular}
-    \label{tab: steigung}
+    \label{tab:steigung}
 \end{table}
 
+Die Steigung ist dabei proportional zu der Anzahl der Elektronen, während die Spannung $U_{\symup{A}}$ proportional zu der Energie ist. Für die Messreihe 
+bei $T=297.35\,\unit{\kelvin}$ befindet sich die graphische Darstellung der Steigung in Abhängigkeit von der Bremsspannung in \autoref{fig:steigung20}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width = 12cm]{build/steigung20.pdf}
+    \caption{Differentielle Energieverteilung bei $T=297.35\,\unit{\kelvin}$.}
+    \label{fig:steigung20}
+\end{figure}
+
+Aus dem Graphen in \autoref{fig:steigung20} ergibt sich dabei ein sichtbares Kontaktpotential bei $U_{\symup{A}} = 6.96 \,\unit{\volt}$. Wenn zwischen
+$U_{\symup{B}} = 10\,\unit{\volt}$ und diesem Wert eine Differenz gebildet wird, ergibt sich für das Kontaktpotential $K = 3.04\,\unit{\volt}$.
+
+In \autoref{fig:steigung140} wird die Steigung in Abhängigkeit der Spannung $U_{\symup{A}}$ bei $T=413.35\,\unit{\kelvin}$ dargestellt.
+\begin{figure}
+    \centering
+    \includegraphics[width = 12cm]{build/steigung140.pdf}
+    \caption{Differentielle Energieverteilung bei $T=413.35\,\unit{\kelvin}$.}
+    \label{fig:steigung140}
+\end{figure}
+Wenn die zweite Messung mit der vorherigen verglichen wird, fällt auf, dass deutlich mehr Elektronen mit Quecksilberatomen stoßen. Um eine qualitative
+Aussage, auch bezüglich der Anregungsenergie von Quecksilber, treffen zu können, hätten mehr Messwerte aufgenommen werden müssen, sodass die 
+Bremsspannung $U_{\symup{A}}$ auch über die Anregungsenergie von $E = 4.9 \, \symup{eV}$ \cite{anregung} hinausgeht.
+
+\subsection{Franck-Hertz-Kurve}
